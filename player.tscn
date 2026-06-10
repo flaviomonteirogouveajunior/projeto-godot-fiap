@@ -80,6 +80,7 @@ animations = [{
 script = ExtResource("1_ivps1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1532908743]
+limit_left = 261
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1710499858]
