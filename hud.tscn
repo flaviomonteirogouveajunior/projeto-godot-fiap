@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dvewtmm6d837k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n2snw"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=1416839147]
+
+[node name="Control" type="Control" parent="." unique_id=1497176980]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthLabel" type="Label" parent="Control" unique_id=1188189471]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "oiiii"
+label_settings = SubResource("LabelSettings_n2snw")
