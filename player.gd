@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-
 const SPEED = 250.0
 const JUMP_VELOCITY = -550.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hud: CanvasLayer = $"../HUD"
+@onready var posicao_inicial: Marker2D = $"../PosicaoInicial"
 
 func _physics_process(delta: float) -> void:
 	
@@ -42,13 +42,20 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+
 # função alterada para ao invés de reiniciar o jogo, chamar a função tomar_dano
 func die():
 	tomar_dano(1)
+
 # função que recebe a quantidade de dano via parâmetro e aplica à vidas
 func tomar_dano(dano:int) -> void:
 	GameManager.vidas -= dano
 	if GameManager.vidas <= 0:
 		print("Game Over")
-		
+	else:
+		respawn() #função respawn chamada
 	hud.atualizar_vidas()
+	
+# função que reposiciona o personagem na posição do Marker2D
+func respawn() -> void:
+	position = posicao_inicial.position
