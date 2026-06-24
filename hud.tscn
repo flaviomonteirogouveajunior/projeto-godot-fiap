@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://dvewtmm6d837k"]
 
+[ext_resource type="Script" uid="uid://cg8yakgevo7wv" path="res://hud.gd" id="1_37p78"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_n2snw"]
 font_size = 22
 font_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="CanvasLayer" unique_id=1416839147]
+script = ExtResource("1_37p78")
 
 [node name="Control" type="Control" parent="." unique_id=1497176980]
 layout_mode = 3
@@ -22,5 +25,5 @@ anchor_right = 1.0
 offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
-text = "oiiii"
+text = "Vidas: "
 label_settings = SubResource("LabelSettings_n2snw")

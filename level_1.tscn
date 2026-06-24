@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://l1dhtqji1d6x"]
 
+[ext_resource type="Script" uid="uid://dq6ogpam0nleh" path="res://game_manager.gd" id="1_5hph3"]
 [ext_resource type="Texture2D" uid="uid://b083qgsjtt24f" path="res://kenney_platformer-art-deluxe/Base pack/Tiles/tiles_spritesheet.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_hn12h"]
 [ext_resource type="Texture2D" uid="uid://ddw5xf6m0oib5" path="res://kenney_platformer-art-deluxe/Ice expansion/sheet.png" id="2_ihfcg"]
@@ -15142,6 +15143,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hn12h")
 
 [node name="Level1" type="Node2D" unique_id=248872943]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=406637358]
+script = ExtResource("1_5hph3")
 
 [node name="cenario" type="Node2D" parent="." unique_id=1195579812]
 
